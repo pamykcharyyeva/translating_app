@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_07_22_042422) do
     t.string "photo_url"
     t.string "bio"
     t.string "location"
+    t.string "language"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

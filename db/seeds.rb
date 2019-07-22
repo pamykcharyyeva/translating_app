@@ -24,7 +24,8 @@ pamyk = User.create({
 	password: "123",
 	photo_url: "photo",
     bio: "st1 bio",
-    location: "NY, NY"
+	location: "NY, NY",
+	language: "Turkmen"
 })
 
 sara = User.create({
@@ -34,7 +35,8 @@ sara = User.create({
 	password: "1234",
 	photo_url: "photo2",
     bio: "2nd bio",
-    location: "CH, TN"
+	location: "CH, TN", 
+	language: "English"
 
 })
 

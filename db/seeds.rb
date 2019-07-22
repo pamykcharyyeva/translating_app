@@ -25,7 +25,6 @@ pamyk = User.create({
 	photo_url: "photo",
     bio: "st1 bio",
     location: "NY, NY"
-	conversation_ids: [first_convo.id, second_convo.id]
 })
 
 sara = User.create({
@@ -36,7 +35,7 @@ sara = User.create({
 	photo_url: "photo2",
     bio: "2nd bio",
     location: "CH, TN"
-	conversation_ids: [second_convo.id]
+
 })
 
 first_message = Message.create({

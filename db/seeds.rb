@@ -22,8 +22,6 @@ pamyk = User.create({
 	last_name: "Charyyeva",
 	email: "pamyk.ch@gmail.com",
 	password: "123",
-	photo_url: "photo",
-    bio: "st1 bio",
 	location: "NY, NY",
 	language: "Turkmen"
 })
@@ -33,8 +31,6 @@ sara = User.create({
 	last_name: "Bernard",
 	email: "sara.bernard@gmail.com",
 	password: "1234",
-	photo_url: "photo2",
-    bio: "2nd bio",
 	location: "CH, TN", 
 	language: "English"
 

@@ -8,12 +8,14 @@ class ConversationsController < ApplicationController
 
 
   def create
-    
-    conversation = Conversation.create(conversation_params)
+   
+	conversation = Conversation.new(title: params[:title], user_id: params[:user_id], creator: params[:creator])
 
-        if conversation.save
+	
+		if conversation.save
+			
             # serialized_data = ActiveModelSerializers::Adapter::Json.new(ConversationSerializer.new(conversation)).serializable_hash
-               ActionCable.server.broadcast 'conversations_channel', ConversationSerializer.new(conversation)
+            ActionCable.server.broadcast 'conversations_channel', ConversationSerializer.new(conversation)
             render json: conversation
         end
     end

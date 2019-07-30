@@ -10,31 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_30_145548) do
+ActiveRecord::Schema.define(version: 2019_07_30_182539) do
 
   create_table "conversations", force: :cascade do |t|
     t.string "title"
-    t.string "creator"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "purpose"
-  end
-
-  create_table "conversations_users", id: false, force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "conversation_id", null: false
-    t.index ["conversation_id"], name: "index_conversations_users_on_conversation_id"
-    t.index ["user_id"], name: "index_conversations_users_on_user_id"
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.text "text"
-    t.integer "conversation_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
+    t.string "creator"
+    t.index ["user_id"], name: "index_conversations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

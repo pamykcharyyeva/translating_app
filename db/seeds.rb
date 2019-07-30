@@ -6,17 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-first_convo = Conversation.create({
-	title: "1st",
-	creator: "Pamyk",
-	purpose: "just cause"
-})
-
-second_convo = Conversation.create({
-	title: "2nd",
-	creator: "Sara",
-	purpose: "just us"
-})
 
 
 pamyk = User.create({
@@ -38,20 +27,16 @@ sara = User.create({
 
 })
 
-first_message = Message.create({
-	text: "Hi there",
-	conversation_id: 1,
-	user_id: 1
+first_convo = Conversation.create({
+	title: "1st",
+	user_id: 1,
+	creator: "Pamyk"
 })
 
-second_message = Message.create({
-	text: "hey there",
-	conversation_id: 2,
-	user_id: 2
+second_convo = Conversation.create({
+	title: "2nd",
+	user_id: 2, 
+	creator: "Sara"
 })
 
-third_message = Message.create({
-	text: "yooo",
-	conversation_id: 1,
-	user_id: 1
-})
+

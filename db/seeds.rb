@@ -8,12 +8,14 @@
 
 first_convo = Conversation.create({
 	title: "1st",
-	creator: "Pamyk"
+	creator: "Pamyk",
+	purpose: "just cause"
 })
 
 second_convo = Conversation.create({
 	title: "2nd",
-	creator: "Sara"
+	creator: "Sara",
+	purpose: "just us"
 })
 
 
